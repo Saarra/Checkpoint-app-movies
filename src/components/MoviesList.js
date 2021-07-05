@@ -8,9 +8,12 @@ function MoviesList({movies,nameSearch,rating}) {
         
         <>
         {
-        movies.filter(movie=>movie.name.toLowerCase().includes(nameSearch.toLowerCase().trim()) && movie.rating ).map((e,i) =>  <CardMovie key={i}
-        name = {e.name} description = {e.description}
-       rating={e.rating} posterURL = {e.posterURL} />)}
+            movies.filter(movie=>movie.name.toLowerCase().includes(nameSearch.toLowerCase().trim()) && rating<=movie.rating ).map((e,i) =>  
+            <CardMovie key={i}
+            name = {e.name} description = {e.description}
+            rating={e.rating} posterURL = {e.posterURL}  />
+            )
+        }
         </>
     )
 }

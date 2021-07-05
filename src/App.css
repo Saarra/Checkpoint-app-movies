@@ -20,6 +20,9 @@
     color: #ccc;
   }
 
-  .form-control{
+  .form-control, Rating{
     margin:2%
+  }
+  .App {
+    margin: 1%;
   }

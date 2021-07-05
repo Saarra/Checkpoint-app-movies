@@ -1,21 +1,28 @@
 import React, { useState } from "react";
-import ReactStars from "react-star-rating-component"
+import Rating from 'react-simple-star-rating'
+ 
 
 
-function Rating({setRating}){
-const ratingChanged = (newrating) => {
-  setRating(newrating)}
-  
-          return (
-            <div>
-            <ReactStars
-            count={5}
-            onChange={ratingChanged}
-            size={24}
-            activeColor="#ffd700"
-          />
-          </div>
-          )
-  };
+function Rate({setRating,rate}){
 
-export default Rating;
+  const handleRating = (rate) => {
+    setRating(rate)
+  }
+ 
+  return (
+    <div className='App'>
+      <Rating
+        onClick={handleRating}
+       value={rate}
+        size={20}
+        // label
+        transition
+        fillColor='orange'
+        emptyColor='gray'
+        className='foo' 
+      />
+      
+    </div>
+  )
+}
+export default Rate;
