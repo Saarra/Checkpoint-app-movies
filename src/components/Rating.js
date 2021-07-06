@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Rating from 'react-simple-star-rating'
  
 
@@ -21,7 +21,6 @@ function Rate({setRating,rate}){
         emptyColor='gray'
         className='foo' 
       />
-      
     </div>
   )
 }
